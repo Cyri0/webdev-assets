@@ -18,6 +18,28 @@ class Character{
         this.DOM_element.style.width = this.size + "px"
         this.DOM_element.style.height = this.size + "px"
         this.DOM_element.style.backgroundImage = `url("${image}")`
+        this.DOM_element.style.backgroundSize = '1000%'
+        this.DOM_element.style.imageRendering = 'pixelated'
+        this.DOM_element.style.backgroundPositionY = this.size * this.id + "px"
+    }
+
+    startIdle = (speed = 100) => {
+        let steps = [8,2]
+        let index = 0
+
+        setInterval(() => {
+            this.DOM_element.style.backgroundPositionX = steps[index] * this.size + "px"
+
+            index = index < steps.length ? index += 1 : 0
+
+        }, speed);
+
+    }
+
+    switchCharacter = (step) => {
+        this.id += step
+        console.log(this.id)
+        this.DOM_element.style.backgroundPositionY = this.size * this.id + "px"
     }
 }
 

@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+
+    <div id="characterPicker" class="page">
+
+        <button onclick="turnCharacter(-1)">&#11164</button>
+        <div id="currentCharacter"></div>
+        <button onclick="turnCharacter(1)">&#11166</button>
+    </div>
+
 
     <script src="Character.js"></script>
     <script src="init.js"></script>

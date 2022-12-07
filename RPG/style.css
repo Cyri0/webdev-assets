@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.page{
+    width: 100%;
+    min-height: 100vh;
+    background-color: orange;
+}
+
+#characterPicker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#characterPicker>button{
+    padding: 10px;
+    font-size: 5rem;
+    background-color: transparent;
+    border: none;
+}
+
+#characterPicker>button:hover{
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+}
+
+#currentCharacter{
+    background-color: skyblue;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
